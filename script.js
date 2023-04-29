@@ -14,21 +14,23 @@ const ENLACE_3 = "https://stackoverflow.com/"
 
 let opcionRecibida = prompt("Ingrese a la pagina : \na\nb\nc");
 
+
+function modificacionPagina(colorFondo, colorTexto, enlaceImg, enlacePagina ) {
+    
+    cuerpoDePagina.style.backgroundColor = colorFondo;
+    cuerpoDePagina.style.color = colorTexto;
+    miImagen.src = enlaceImg;
+    miEnlace.href = enlacePagina;
+
+}
+
 if (opcionRecibida == "a"){
-    cuerpoDePagina.style.backgroundColor = "orange";
-    cuerpoDePagina.style.color = "black";
-    miImagen.src = IMAGEN_UNO;
-    miEnlace.href = ENLACE_1;
+    modificacionPagina("orange", "black", IMAGEN_UNO, ENLACE_1);
 }else if(opcionRecibida == "b"){
-    cuerpoDePagina.style.backgroundColor = "black";
-    cuerpoDePagina.style.color = "white";
-    miImagen.src = IMAGEN_DOS;
-    miEnlace.href = ENLACE_2;
+    modificacionPagina("black", "white", IMAGEN_DOS, ENLACE_2);
 }else if(opcionRecibida == "c"){
-    cuerpoDePagina.style.backgroundColor = "pink";
-    cuerpoDePagina.style.color = "green";
-    miImagen.src = IMAGEN_TRES;
-    miEnlace.href = ENLACE_3;
+    modificacionPagina("pink", "green", IMAGEN_TRES, ENLACE_3);
+    
 }
 
 
